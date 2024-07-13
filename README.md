@@ -13,3 +13,8 @@
 * Completed "Group Anagrams" 
 * Practiced Problems: 1
 * Total Problems: 4
+
+## 07/12/2024
+* Completed "Top K Elements in List"
+* Practiced Problems: 1
+* Total Problems: 5
