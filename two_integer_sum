@@ -13,6 +13,22 @@ class Solution:
         # for i, num in enumerate(nums):
         #is a common Python idiom for iterating over a list (or other iterable) 
         # when you need both the index and the value of each element.
-        
-        return []
+
+        complements = {} 
+        for i, num in enumerate(nums):
+            difference = target - num
+            if difference in complements: 
+                if(i > complements[difference]):
+                    return [complements[difference], i]
+                else:
+                    return [i, complements[difference]]
+            else:
+                 complements[num] = i
+
+    print(twoSum([2, 7, 11, 15], 9))
+
+    # I originally made the mistake of storing the difference 
+    # the fix was to store the actual number, since that would be the number that is missing from the pair 
+    # I initially stored the compliment because i was looking for the index that matched 
+    # but this was but a brainfart :) 
         
