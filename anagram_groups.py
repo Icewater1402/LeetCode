@@ -1,26 +1,20 @@
 # NeetCode Practice
 # Anagram Groups (Medium)
-#Given two strings s and t, return true if the two strings are anagrams of each other, otherwise return false.
+# Given an array of strings strs, group all anagrams together into sublists. You may return the output in any order.
 #An anagram is a string that contains the exact same characters as another string, but the order of the 
 # characters can be different.
+# GPT Insight: two hash maps can be compared if they have the same keys and values. Order does not matter 
 from typing import List
 class Solution:
     def groupAnagrams(strs: List[str]) -> List[List[str]]:
-        anagrams = []
-        if len(strs) == 1:
-            anagrams.append(strs)
-            return anagrams
-        anagram_hash = {}
+        # solution: sorted string is your key and a list of strings will be your value 
+        list_dict = {}
         for i in strs:
             sorted_word = ''.join(sorted(i))
-            if(sorted_word in anagram_hash):
-                anagram_hash[sorted_word].append(i)
+            if sorted_word in list_dict:
+                list_dict[sorted_word].append(i)
             else:
-                anagram_hash[sorted_word] = [i]
-        return list(anagram_hash.values())
-    
+                list_dict[sorted_word] = [i]
+        return list(list_dict.values())
 
-            
-    strings = ["act", "pots", "tops", "cat", "stop", "hat"]
-    answer = groupAnagrams(strings)
-    print(answer)
+    print(groupAnagrams(["act","pots","tops","cat","stop","hat"]))
