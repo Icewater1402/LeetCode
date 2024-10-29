@@ -1,26 +1,29 @@
 from typing import List
 class Solution:
 
+
+# Design an algorithm to encode a list of strings to a single string. 
+# The encoded string is then decoded back to the original list of strings.
+
     def encode(strs: List[str]) -> str:
-        combined_list = ""
+        encoded_dict = {} 
         for i in strs:
-            combined_list += i 
-            combined_list += " "
-        print(combined_list)
-        return combined_list
+            encoded_dict[i] = 0
+        encoded_str = ""
+        for key in encoded_dict:
+            encoded_str += key + " "
+        print(encoded_str)
+        return encoded_str
 
     def decode(s: str) -> List[str]:
+        decode_spaces = []
         decode_list = []
         word = ""
-        for letter in s:
-            if(letter == " "):
-                decode_list.append(word)
-                word = "" 
-                continue
-            else:
-                word += letter 
-                continue
-        return decode_list
+        
+    #problem with this is knowing what the original array looked like after encoding it the first time 
+    # i want to use a dictionary to keep track of existing indices but its unaccessible by the decoder 
+    
 
-    encoded = encode(["hello", "how", "many", "times"])
-    print(decode(encoded))
+
+    encoded = encode(["The quick brown fox", "jumps over the", "lazy dog", "1234567890", "abcdefghijklmnopqrstuvwxyz"])
+    #print(decode(encoded))
