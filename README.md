@@ -18,3 +18,8 @@
 * Completed "Top K Elements in List"
 * Practiced Problems: 1
 * Total Problems: 5
+
+## 10/31/2024
+* lmao i keep forgetting to update this 
+* I finished one of the harder questions imo- not really using arrays or hashing very much
+* I used this idea called a "delimiter" in this problem for encode/decode
