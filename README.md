@@ -20,6 +20,12 @@
 * Total Problems: 5
 
 ## 10/31/2024
-* lmao i keep forgetting to update this 
-* I finished one of the harder questions imo- not really using arrays or hashing very much
-* I used this idea called a "delimiter" in this problem for encode/decode
+* Completed "Encode and Decode Strings"
+* Practiced Problems: 1
+* Total Problems: 6
+
+## 11/01/2024
+* Completed "Product of Array Excep Self"
+* Practiced Problems: 1
+* Total Problems 7 
+
